@@ -7,10 +7,12 @@ import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.jordifierro.androidbase.data.net.RestApi;
 import com.jordifierro.androidbase.data.net.interceptor.HttpInterceptor;
+import com.jordifierro.androidbase.data.repository.MoviesDataRepository;
 import com.jordifierro.androidbase.data.repository.NoteDataRepository;
 import com.jordifierro.androidbase.data.repository.SessionDataRepository;
 import com.jordifierro.androidbase.data.repository.UserDataRepository;
 import com.jordifierro.androidbase.data.repository.VersionDataRepository;
+import com.jordifierro.androidbase.domain.repository.MovieRepository;
 import com.jordifierro.androidbase.domain.repository.NoteRepository;
 import com.jordifierro.androidbase.domain.repository.SessionRepository;
 import com.jordifierro.androidbase.domain.repository.UserRepository;
@@ -70,4 +72,9 @@ public class DataModule {
         return new VersionDataRepository(restApi);
     }
 
+    @Provides
+    @Singleton
+    MovieRepository provideMovieRepository(RestApi restApi) {
+        return new MoviesDataRepository(restApi);
+    }
 }

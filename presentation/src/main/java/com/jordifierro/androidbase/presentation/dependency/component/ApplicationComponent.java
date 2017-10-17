@@ -2,10 +2,12 @@ package com.jordifierro.androidbase.presentation.dependency.component;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Movie;
 
 import com.jordifierro.androidbase.data.net.RestApi;
 import com.jordifierro.androidbase.domain.executor.PostExecutionThread;
 import com.jordifierro.androidbase.domain.executor.ThreadExecutor;
+import com.jordifierro.androidbase.domain.repository.MovieRepository;
 import com.jordifierro.androidbase.domain.repository.NoteRepository;
 import com.jordifierro.androidbase.domain.repository.SessionRepository;
 import com.jordifierro.androidbase.domain.repository.UserRepository;
@@ -31,5 +33,6 @@ public interface ApplicationComponent {
     UserRepository userRepository();
     NoteRepository noteRepository();
     VersionRepository versionRepository();
+    MovieRepository movieRepository();
 
 }

@@ -8,6 +8,7 @@ import com.jordifierro.androidbase.presentation.view.fragment.NotesFragment;
 import com.jordifierro.androidbase.presentation.view.fragment.RegisterFragment;
 import com.jordifierro.androidbase.presentation.view.fragment.ResetPasswordFragment;
 import com.jordifierro.androidbase.presentation.view.fragment.SettingsFragment;
+import com.jordifierro.androidbase.presentation.view.fragment.UpcomingMoviesFragment;
 
 public interface FragmentInjector {
 
@@ -19,5 +20,6 @@ public interface FragmentInjector {
     void inject(NoteEditFragment noteEditFragment);
     void inject(SettingsFragment settingsFragment);
     void inject(ResetPasswordFragment resetPasswordFragment);
+    void inject(UpcomingMoviesFragment upcomingMoviesFragment);
 
 }
